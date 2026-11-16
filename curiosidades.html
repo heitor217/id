@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curiosidades - Initial D</title>
     
+    <!-- Importação do CSS do Bootstrap 5.3.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-     <style>
+    <style>
+        /* =========================================================
+           ESTILOS DA PÁGINA
+           ========================================================= */
         body {
             background-color: #121212; 
             color: #e0e0e0; 
         }
 
         p {
-            text-align: justify;
+            text-align: justify; 
         }
         
+        /* =========================================================
+           CABEÇALHO (HEADER)
+           ========================================================= */
         .meu-header {
             width: 100%;
             height: 100px;
@@ -32,6 +39,9 @@
             object-fit: contain;
         }
 
+        /* =========================================================
+           CAIXAS DE TEXTO E IMAGENS LATERAIS
+           ========================================================= */
         .caixa-historinha {
             background-color: rgba(33, 37, 41, 0.85);
             color: #ffffff;
@@ -41,10 +51,13 @@
         .imagem-lateral {
             width: 100%;
             height: 350px;
-            object-fit: cover;
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
             border-radius: 8px;
         }
 
+        /* =========================================================
+           BANNER CENTRAL COM TEXTO FLUTUANTE
+           ========================================================= */
         .banner-central-flutuante {
             width: 100%;
             height: 450px;
@@ -64,7 +77,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* Centraliza perfeitamente no meio da imagem */
             background-color: rgba(0, 0, 0, 0.75);
             border: 2px solid rgba(255, 255, 255, 0.75);
             color: #ffffff;
@@ -74,6 +87,9 @@
             max-width: 600px;
         }
 
+        /* =========================================================
+           RESPONSIVIDADE E CONFORTO DE LEITURA (SMARTPHONES)
+           ========================================================= */
         @media (max-width: 768px) {
             body {
                 font-size: 0.95rem;
@@ -115,13 +131,18 @@
 </head>
 <body>
 
+    <!-- =========================================================
+         CABEÇALHO PRINCIPAL COM LOGO E BOTÃO DO MENU
+         ========================================================= -->
     <header class="container my-4">
         <div class="meu-header d-flex align-items-center justify-content-between px-4 shadow">
             
+            <!-- Logo clicável que redireciona para a página inicial -->
             <a href="index.html">
                 <img src="imagens/initial d header corrigido.jpg" alt="Logo Initial D" class="img-fluid">
             </a>
 
+            <!-- Botão que aciona o menu lateral (Offcanvas) -->
             <div>
                 <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuEscondido" aria-controls="menuEscondido">
                     ☰ Menu
@@ -131,6 +152,9 @@
         </div>
     </header>
 
+    <!-- =========================================================
+         MENU LATERAL DESLIZANTE (OFFCANVAS BOOTSTRAP)
+         ========================================================= -->
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="menuEscondido" aria-labelledby="menuEscondidoLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="menuEscondidoLabel"><strong>NAVEGAÇÃO</strong></h5>
@@ -139,6 +163,7 @@
         <div class="offcanvas-body">
             <p class="text-secondary text-start"><em>Escolha uma das páginas abaixo</em></p>
             
+            <!-- Links de navegação entre as páginas do site -->
             <ul class="nav flex-column fs-5">
                 <li class="nav-item mb-2">
                     <a href="index.html" class="nav-link text-light">Página Inicial</a>
@@ -153,9 +178,13 @@
         </div>
     </div>
 
+    <!-- =========================================================
+         CONTEÚDO PRINCIPAL DA PÁGINA
+         ========================================================= -->
     <main class="container my-5">
         <h2 class="text-center mb-4 text-white">Initial D e suas curiosidades</h2>
         
+        <!-- BLOCO 1: Curiosidade sobre as montadoras reais (Texto à esquerda + Foto à direita) -->
         <div class="row align-items-center mb-5">
             <div class="col-md-6 mb-4 mb-md-0">
                 <div class="caixa-historinha p-4 shadow">
@@ -175,6 +204,7 @@
             </div>
         </div>
 
+        <!-- BLOCO 2: Banner central com caixa de texto flutuante sobre a foto -->
         <div class="row mb-5">
             <div class="col-12">
                 <div class="banner-central-flutuante shadow">
@@ -193,7 +223,9 @@
             </div>
         </div>
 
+        <!-- BLOCO 3: Players individuais do Spotify (Duas colunas lado a lado) -->
         <div class="row mb-5">
+            <!-- Player 1: Deja Vu, clássica música com embed do spotify -->
             <div class="col-md-6 mb-4 mb-md-0">
                 <div class="caixa-historinha p-3 shadow">
                     <h4 class="text-center mb-3 text-white">Deja Vu, um dos eurobeat mais famosos</h4>
@@ -201,6 +233,7 @@
                 </div>
             </div>
 
+            <!-- Player 2: Outra música também famosa do anime com uso de embed do spotify -->
             <div class="col-md-6">
                 <div class="caixa-historinha p-3 shadow">
                     <h4 class="text-center mb-3 text-white">Rage your dream, música marcante no anime</h4>
@@ -209,6 +242,7 @@
             </div>
         </div>
 
+        <!-- BLOCO 4: O espaço feminino no anime (Foto à esquerda + Texto à direita) -->
         <div class="row align-items-center mb-5">
             <div class="col-md-6 mb-4 mb-md-0">
                 <img src="imagens/mako e sayuki.png" alt="Monte Akina Real" class="imagem-lateral shadow">
@@ -227,6 +261,7 @@
             </div>
         </div>
 
+        <!-- BLOCO 5: O futuro de Takumi em MF Ghost (Foto à esquerda + Texto à direita) -->
         <div class="row align-items-center mb-5">
             <div class="col-md-6 mb-4 mb-md-0">
                 <img src="imagens/mf-ghost-kanata.jpg" alt="Motor 4A-GE" class="imagem-lateral shadow">
@@ -246,6 +281,7 @@
             </div>
         </div>
 
+        <!-- BLOCO 6: Playlist completa do Spotify (Texto à esquerda + Player Playlist à direita, caso a visualizaçao original seja no desktop) -->
         <div class="row align-items-center mb-5">
             
             <div class="col-md-6 mb-4 mb-md-0">
@@ -265,7 +301,8 @@
 
         </div>
 
-         <div class="row mb-4">
+        <!-- BLOCO 7: Rodapé de encerramento com botões de navegação para as outras páginas -->
+        <div class="row mb-4">
             <div class="col-12">
                 <div class="caixa-historinha text-center p-5 shadow">
                     <h4 class="text-white mb-3">Obrigado(a) por sua visita ao site! Veja também:</h4>
@@ -279,6 +316,7 @@
 
     </main>
 
+    <!-- Importação do JavaScript do Bootstrap 5.3.3 (necessário para o funcionamento do Menu Offcanvas) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
