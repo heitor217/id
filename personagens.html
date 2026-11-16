@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagens - Initial D</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #121212; 
+            color: #e0e0e0; 
+        }
+
+        p {
+            text-align: justify;
+        }
+        
+        .meu-header {
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .meu-header img {
+            width: 50%;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .caixa-historinha {
+            background-color: rgba(33, 37, 41, 0.85);
+            color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .caixa-proporcional {
+            height: 350px;
+            overflow-y: auto;
+        }
+
+        .imagem-lateral {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .imagem-miniatura {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .banner-central-flutuante {
+            width: 100%;
+            height: 450px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #212529;
+        }
+
+        .banner-central-flutuante img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .caixa-flutuante-meio {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.75);
+            border: 2px solid rgba(255, 255, 255, 0.75);
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            width: 85%;
+            max-width: 600px;
+        }
+
+        
+        @media (max-width: 768px) {
+            body {
+                font-size: 0.95rem;
+            }
+            .banner-central-flutuante {
+                height: auto; 
+                min-height: 420px;
+            }
+            .banner-central-flutuante img {
+                height: 420px;
+            }
+            .caixa-flutuante-meio {
+                width: 92%; 
+                padding: 15px; 
+            }
+            .caixa-flutuante-meio h3 {
+                font-size: 1.15rem; 
+                margin-bottom: 10px;
+            }
+            .caixa-flutuante-meio p {
+                font-size: 0.85rem; 
+                line-height: 1.45;
+            }
+            .caixa-proporcional {
+                height: auto;
+                max-height: 280px; 
+            }
+            .caixa-proporcional {
+                height: auto !important;
+                max-height: none !important;
+                overflow-y: visible !important;
+            }
+            .caixa-historinha {
+                padding: 1rem !important;
+            }
+            .caixa-historinha p, .small {
+                font-size: 0.85rem !important;
+                line-height: 1.45;
+            }
+            .imagem-lateral {
+                height: 240px;
+            }
+            .imagem-miniatura {
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container my-4">
+        <div class="meu-header d-flex align-items-center justify-content-between px-4 shadow">
+        
+            <a href="index.html">
+                <img src="imagens/initial d header corrigido.jpg" alt="Logo Initial D" class="img-fluid">
+            </a>
+            <div>
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuEscondido" aria-controls="menuEscondido">
+                    ☰ Menu
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="menuEscondido" aria-labelledby="menuEscondidoLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="menuEscondidoLabel"><strong>NAVEGAÇÃO</strong></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p class="text-secondary text-start"><em>Escolha uma das páginas abaixo</em>:</p>
+            
+            <ul class="nav flex-column fs-5">
+                <li class="nav-item mb-2">
+                    <a href="index.html" class="nav-link text-light">Página Inicial</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="curiosidades.html" class="nav-link text-light">Curiosidades</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="personagens.html" class="nav-link text-light">Personagens e seus carros</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="container my-5">
+        <h2 class="text-center mb-4 text-white">Elenco de Initial D</h2>
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="banner-central-flutuante shadow">
+                    <img src="imagens/capa personagens.webp" alt="Elenco e Carros de Initial D">
+                    
+                    <div class="caixa-flutuante-meio text-center shadow">
+                        <h3 class="mb-3">Conheça o universo de corridas por trás de Initial D</h3>
+                        <p class="mb-0">
+                            Tudo sobre as equipes, estilos de corridas, as estradas sinuosas da província de Gunma e as máquinas icônicas dos anos 90 que marcaram cada batalha nas montanhas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="imagens/akina logo.jpg" alt="Akina SpeedStars" class="imagem-lateral shadow">
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha caixa-proporcional p-4 shadow">
+                    <h3 class="mb-3 fs-5">Akina SpeedStars - A equipe protagonista do anime</h3>
+                    <p class="mb-0">
+                        Os Akina Speedstars são uma equipe amadora de corrida de rua do Monte Akina, formada por entusiastas locais liderados por Iketani. 
+                        Embora não tenham o status ou o orçamento de equipes de elite como os RedSuns, eles ganham enorme destaque graças a Takumi Fujiwara e seu lendário AE86. 
+                        Suas disputas seguem as regras tradicionais das corridas de touge japonês. O formato principal é a corrida de perseguição, onde vence quem abrir vantagem 
+                        ou conseguir ultrapassar o rival. O fair play é estritamente valorizado, proibindo batidas intencionais para forçar erros. As provas ocorrem majoritariamente 
+                        à noite para evitar o tráfego civil. O conhecimento profundo das curvas perigosas de Akina define o sucesso na equipe.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/takumi akina.jpg" alt="Takumi Fujiwara" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Takumi Fujiwara</h6>
+                            <p class="small text-secondary mb-0">
+                                O protagonista introvertido choca o circuito de touge ao vencer rivais potentes nas descidas com seu AE86, integrando depois o Projeto D criado por Ryosuke Takahashi.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/ae86 curiosidade.webp" alt="Corolla Trueno AE86" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Corolla Trueno AE86</h6>
+                            <p class="small text-secondary mb-0"> 
+                                Compensando a baixa potência com chassi leve e excelente inércia, o lendário AE86 recebe depois um motor 4A-GE de alta rotação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/itsuki akina.jpg" alt="Itsuki" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Itsuki Takeuchi</h6>
+                            <p class="small text-secondary mb-0">
+                                Alívio cômico impulsivo e leal que serve como amigo dedicado na trajetória de Takumi, apesar de ter pouco talento ao volante.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/ae85 do itsuki akina.jpg" alt="Corolla Levin AE85" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Corolla Levin AE85</h6>
+                            <p class="small text-secondary mb-0">
+                                Comprado por engano achando ser um AE86, o modelo menos potente acompanha Itsuki em suas aventuras automotivas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/kenji akina.jpg" alt="Kenji" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Kenji</h6>
+                            <p class="small text-secondary mb-0">
+                                Membro fundador dos Speedstars que apoia a logística e narra as corridas, reforçando o espírito de união da equipe com seu 180SX.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/240sx kenji.webp" alt="Nissan 240SX" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Nissan 180SX</h6>
+                            <p class="small text-secondary mb-0">
+                                O esportivo turbo de tração traseira compartilhado com a plataforma do Silvia S13 é ideal para drift e acompanha as corridas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/iketani lider de akina.jpg" alt="Koichiro Iketani" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Koichiro Iketani </h6>
+                            <p class="small text-secondary mb-0">
+                                Líder dos Akina Speedstars que pilota um Silvia S13 e atua como mentor, marcado por sua dedicação e romance desastroso com Mako.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/silvia s13 do iketani.jpg" alt="Nissan Silvia" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Nissan Silvia </h6>
+                            <p class="small text-secondary mb-0">
+                                O Silvia S13 prateado serve como base de encontros e identidade para os Speedstars, refletindo a essência dos entusiastas locais.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="imagens/redsuns.jpg" alt="Equipe Project D" class="imagem-lateral shadow">
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha caixa-proporcional p-4 shadow">
+                    <h3 class="mb-3 fs-5">Redsuns - Os primeiros rivais</h3>
+                    <p class="mb-0">
+                        A equipe RedSuns de Akagi, liderado pelos irmãos Takahashi, é uma das forças mais dominantes e respeitadas no universo de Initial D. 
+                        Diferente de equipes locais informais, contam com engenheiros especializados, patrocinadores e uma estrutura de alto nível. 
+                        Conhecidos pelo rigor técnico e pela busca implacável pela excelência, eles viajam para desafiar as melhores equipes de outras montanhas da região. 
+                        Apesar da postura inicialmente arrogante de alguns membros, a equipe demonstra enorme respeito pelo talento bruto e pelo verdadeiro espírito das corridas de touge. 
+                        É justamente contra os RedSuns que Takumi Fujiwara faz sua corrida de estreia oficial, marcando o início da lenda do AE86.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/ryosuke do redsuns.jpg" alt="Ryosuke Takahashi" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Ryosuke Takahashi</h6>
+                            <p class="small text-secondary mb-0">
+                                Conhecido como o "Cometa Branco de Akagi", o piloto de elite lidera os RedSuns com precisão científica e funda o Projeto D mais tarde no anime.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/rx7 do ryosuke redsuns.jpg" alt="Mazda RX-7 FC" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Mazda RX-7 FC</h6>
+                            <p class="small text-secondary mb-0">
+                                O icônico esportivo de motor rotativo bi-turbo reflete a mente perfeccionista de Ryosuke e lidera a evolução técnica dos RedSuns.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/keisuke redsuns.jpg" alt="Keisuke Takahashi" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Keisuke Takahashi</h6>
+                            <p class="small text-secondary mb-0">
+                                Piloto explosivo dos RedSuns que pilota um RX-7 FD,após ser derrotado por Takumi, também entra para o Projeto D de seu irmão Ryosuke.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/mazda rx7 do keisuke redsuns.jpg" alt="Mazda RX-7 FD" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Mazda RX-7 FD</h6>
+                            <p class="small text-secondary mb-0">
+                                Esportivo bi-turbo de aerodinâmica agressiva otimizado para subidas (uphill), coroando o status de elite de seu piloto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="imagens/night kids.jpg" alt="Night Kids" class="imagem-lateral shadow">
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha caixa-proporcional p-4 shadow">
+                    <h3 class="mb-3 fs-5">Night Kids - Entre o ego e a agressividade</h3>
+                    <p class="mb-0">
+                        A equipe Night Kids, liderada por Takeshi Nakazato, são especializados em corridas de subida (uphill) e usam carros potentes com tração integral, suas regras de corrida, consiste em amarrar uma das 
+                        mão do piloto sobre o volante, para que termine a corrida sem usar as duas sobre o volante, forçando assim, os limites dos corredores nas subidas das montanhas. 
+                        E diferente de outras equipes, na Night Kids ela sofre de problemas internos constantes entre o líder Takeshi que tem ego inflado e auto-confiança por conta de seu
+                        carro potente e com tração integral, e por outro lado, Shingo que usa da agressividade nas corridas e que é capaz de fazer sujeiras sem se importar com a integridade 
+                        dos adversário para vencer uma corrida. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/takeshi night kids.jpg" alt="Takeshi Nakazato" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Takeshi Nakazato</h6>
+                            <p class="small text-secondary mb-0">
+                                Líder feroz dos Night Kids em Myogi especialista em subidas que confia na tração integral para intimidar rivais, acaba virando aliado de Takumi.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/skyline do takeshi night kis.jpg" alt="Nissan Skyline GT-R" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Nissan Skyline GT-R</h6>
+                            <p class="small text-secondary mb-0">
+                                O GT-R R32 preto com motor bi-turbo e tração integral destaca-se pela força bruta nas retas, servindo de arma principal em Myogi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/shingo night kids.jpeg" alt="Shingo Shouji" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Shingo Shouji</h6>
+                            <p class="small text-secondary mb-0">
+                                Membro agressivo dos Night Kids criador da "corrida de fita adesiva" que tenta sabotar Takumi, sofrendo as consequências ao bater.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/civic do shingo night kids.jpg" alt="Honda Civic SiR" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Honda Civic SiR</h6>
+                            <p class="small text-secondary mb-0">
+                                O hatchback vermelho de tração dianteira focado em alta rotação fica severamente danificado após a tentativa de sabotagem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="imagens/emperor.jpg" alt="Emperor" class="imagem-lateral shadow">
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha caixa-proporcional p-4 shadow">
+                    <h3 class="mb-3 fs-5">Emperor - A equipe composta por Mitsubishi</h3>
+                    <p class="mb-0">
+                        A Emperor é uma equipe liderada por Kyoichi Sudo, eles chegam a Gunma com o objetivo declarado de varrer todas as equipes locais e provar a supremacia absoluta de seus veículos.
+                        A equipe é composta por Mitsubishi Lancer Evolution (principalmente os modelos Evo III e IV), explorando ao máximo a tração integral e os turbos, curiosamente é a equipe que mais 
+                        deu trabalho para o protagonista, sendo uma das corridas entre o líder da Emperor, uma das únicas derrotas de Takumi, a curiosidade fica para uma regra rigorosa da equipe de que derrotados devem estampar um adesivo de desistência em seus carros, simbolizando a desonra.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/kyoichi sudo emperor.jpg" alt="Kyoichi Sudo" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Kyoichi Sudo</h6>
+                            <p class="small text-secondary mb-0">
+                                Líder da Emperor que impõe adesivos de desonra, usando um Evo III com anti-lag de rally, um dos únicos a derrotar a Takumi durante o anime.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/evo 3 do kyoichi emperor.jpg" alt="Mitsubishi Lancer Evolution III" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Mitsubishi Lancer Evolution III</h6>
+                            <p class="small text-secondary mb-0">
+                                Máquina de rali com tração integral e sistema anti-lag que consagra-se ao quebrar a invencibilidade do AE86 de Takumi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/seiji emperor.jpg" alt="Seiji Iwaki" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Seiji Iwaki</h6>
+                            <p class="small text-secondary mb-0">
+                                O arrogante segundo piloto da Emperor é duramente castigado e derrotado de forma humilhante pelo AE86 nas descidas de Akina.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/evo 4 do seiji emperor.jpg" alt="Mitsubishi Lancer Evolution IV" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Mitsubishi Lancer Evolution IV</h6>
+                            <p class="small text-secondary mb-0">
+                                Potente esportivo de tração integral que carece do anti-lag refinado de Kyoichi e sofre derrota humilhante em Akina.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="imagens/impact blue.jpg" alt="Impact Blue" class="imagem-lateral shadow">
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha caixa-proporcional p-4 shadow">
+                    <h3 class="mb-3 fs-5">Impact Blue - A presença feminina nas corridas</h3>
+                    <p class="mb-0">
+                        A Impact Blue é uma equipe composta por Mako Sato e sua co-pilota e melhor amiga Sayuki. Diferente de grandes grupos organizados, 
+                        elas formam uma dupla focada exclusivamente em dominar a sua montanha natal com um Nissan Silvia S13 de cor azul vibrante. Mako é a piloto talentosa conhecida por 
+                        suas frenagens agressivas e curvas fluidas nas descidas, enquanto Sayuki atua como a estrategista e navegadora perfeita. Embora amigáveis fora das pistas, elas são temidas e respeitadas por 
+                        rivalizarem de igual para igual com os melhores corredores de Gunma. A Impact Blue ganha um papel marcante na história ao protagonizar um dos arcos mais memoráveis e 
+                        sentimentais da série.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/mako blue.jpg" alt="Mako Sato" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Mako Sato</h6>
+                            <p class="small text-secondary mb-0">
+                                Talentosa e veloz piloto da Impact Blue que domina as curvas de Usui, destacando-se pela pilotagem feroz e paixão por Iketani.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/mako sileighty blue.jpg" alt="Nissan SilEighty" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Nissan 180SX</h6>
+                            <p class="small text-secondary mb-0">
+                                Combinando dianteira de Silvia S13 e motor SR20DET preparado, o veículo vira uma arma formidável nas mãos de Mako.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="caixa-historinha p-3 shadow h-100">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="imagens/sayuki blue.jpg" alt="Sayuki" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Sayuki</h6>
+                            <p class="small text-secondary mb-0">
+                                Extrovertida estrategista e co-pilota cujas orientações precisas são essenciais para o sucesso do SilEighty, lembrada também pela sua admiração por Takumi.
+                            </p>
+                        </div>
+
+                        <div class="col-6">
+                            <img src="imagens/sileight sayuki.jpg" alt="SilEighty na Cultura" class="imagem-miniatura mb-2 shadow-sm">
+                            <h6 class="text-white mb-1">Fatos sobre o Sileighty </h6>
+                            <p class="small text-secondary mb-0">
+                                A conversão nasceu em garagens japonesas dos anos 90 trocando peças para unir estilo e economia, virando uma máquina icônica.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="caixa-historinha text-center p-5 shadow">
+                    <h4 class="text-white mb-3">Obrigado(a) por sua visita ao site! Veja também:</h4>
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <a href="index.html" class="btn btn-light px-4 py-2 fw-semibold">Página Inicial</a>
+                        <a href="curiosidades.html" class="btn btn-light px-4 py-2 fw-semibold">Curiosidades</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
