@@ -39,8 +39,8 @@
         }
 
         .caixa-proporcional {
-            height: 350px;
-            overflow-y: auto;
+            height: auto;
+            overflow-y: visible;
         }
 
         .imagem-lateral {
@@ -86,10 +86,13 @@
             max-width: 600px;
         }
 
-        
         @media (max-width: 768px) {
             body {
                 font-size: 0.95rem;
+            }
+            p {
+                text-align: left;
+                hyphens: auto;
             }
             .banner-central-flutuante {
                 height: auto; 
@@ -109,10 +112,7 @@
             .caixa-flutuante-meio p {
                 font-size: 0.85rem; 
                 line-height: 1.45;
-            }
-            .caixa-proporcional {
-                height: auto;
-                max-height: 280px; 
+                text-align: center;
             }
             .caixa-proporcional {
                 height: auto !important;
@@ -120,6 +120,7 @@
                 overflow-y: visible !important;
             }
             .caixa-historinha {
+                height: auto !important;
                 padding: 1rem !important;
             }
             .caixa-historinha p, .small {
@@ -202,7 +203,7 @@
                     <p class="mb-0">
                         Os Akina Speedstars são uma equipe amadora de corrida de rua do Monte Akina, formada por entusiastas locais liderados por Iketani. 
                         Embora não tenham o status ou o orçamento de equipes de elite como os RedSuns, eles ganham enorme destaque graças a Takumi Fujiwara e seu lendário AE86. 
-                        Suas disputas seguem as regras tradicionais das corridas de touge japonês. O formato principal é a corrida de perseguição, onde vence quem abrir vantagem 
+                        Suas disputas seguem as regras tradicionais das corridas de touge japonês.<br><br> O formato principal é a corrida de perseguição, onde vence quem abrir vantagem 
                         ou conseguir ultrapassar o rival. O fair play é estritamente valorizado, proibindo batidas intencionais para forçar erros. As provas ocorrem majoritariamente 
                         à noite para evitar o tráfego civil. O conhecimento profundo das curvas perigosas de Akina define o sucesso na equipe.
                     </p>
